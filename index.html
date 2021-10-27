@@ -4,8 +4,11 @@
     <meta charset="utf-8">
     <meta https-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>eg_media_gallery</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"><!-- font awesome CDN -->
+    <title>Media Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="css/sanitize.css">
     <link rel="stylesheet" href="css/style.css">
   <body>
@@ -14,16 +17,16 @@
         <span class="label"><i class="home fas fa-home"></i>Home</span>
       </a>
       <a class="nav-item">
-        <span class="label"><i class="fas fa-cloud-upload-alt"></i>Upload</span>
+        <span class="label"><i class="upload fas fa-cloud-upload-alt"></i>Upload</span>
       </a>
       <a class="nav-item">
-        <span class="label"><i class="far fa-question-circle"></i> Info</span>
+        <span class="label"><i class=" info far fa-question-circle"></i> Info</span>
       </a>
       <a class="nav-item">
-        <span class="label"><i class="far fa-images"></i> Photo Credits</span>
+        <span class="label"><i class="cred far fa-images"></i> Photo Credits</span>
       </a>
       <a class="nav-item more">
-        <span class="label"><i class="fas fa-ellipsis-h"></i>More</span>
+        <span class="label"><i class="more fas fa-ellipsis-h"></i>More</span>
       </a>
       <a href="javascript:void(0);" class="nav-item trigram" onclick="navToggle()">&#9776;</a>
     </nav>
@@ -52,7 +55,6 @@
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
-      <br />
       <div class="popup">
         <span class="indicator" onclick="currentSlide(1)"></span>
         <span class="indicator" onclick="currentSlide(2)"></span>
@@ -65,7 +67,7 @@
         <div class="thumb"></div><hr />
         <div class="card-content">
           <h4 class="card-title">Just Some Trees</h4>
-          <p class="card-text">Here are some trees below a skyline with some mountains in the background. Trees are made up of trunks, branches and leaves. </p>
+          <p class="card-text">Here are some trees below a skyline with some mountains in the background. Trees are made up of branches and leaves. </p>
           <button data-modal="#10" class="card-more button">View</button>
         </div>
       </div>
@@ -98,9 +100,9 @@
   						<h3>Artsy Nature Picture</h3>
   						<p>Just another picture of some trees and a mountain, but this one has the added bonus of containing a small body of water . . . Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   					</div>
-  				</div><!--end .modal-body-->
-  		  </div><!--end .modal-content-->
-  		</div><!--end .modal-->
+  				</div>
+  		  </div>
+  		</div>
       <div class="grid-item three">
         <div class="thumb"></div><hr />
         <div class="card-content">
@@ -108,7 +110,7 @@
           <p class="card-text">Fun Fact: Approximately 1/3 of beach-goers can't swim. Somewhat unsurprising, considering 55% of the world can't swim unassisted. </p>
           <button data-modal="#35" class="card-more button">View</button>
         </div>
-      </div><!--end .grid-item -->
+      </div>
       <div id="35" class="modal">
   		  <div class="modal-content">
   		    <span class="close">&times;</span>
@@ -118,9 +120,9 @@
   						<h3>Tropical Beach</h3>
   						<p>Fun Fact: Approximately 1/3 of beach-goers can't swim. Somewhat unsurprising, considering 55% of the world can't swim unassisted . . .  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   					</div>
-  				</div><!--end .modal-body-->
-  		  </div><!--end .modal-content-->
-  		</div><!--end .modal-->
+  				</div>
+  		  </div>
+  		</div>
       <div class="grid-item four">
         <div class="thumb"></div><hr />
         <div class="card-content">
@@ -128,7 +130,7 @@
           <p class="card-text">This looks like it's on an small island, and probably has less visitors. It could be a popular vacation spot, what do I know?</p>
           <button data-modal="#44" class="card-more button">View</button>
         </div>
-      </div><!--end .grid-item -->
+      </div>
       <div id="44" class="modal">
   		  <div class="modal-content">
   		    <span class="close">&times;</span>
@@ -138,9 +140,9 @@
   						<h3>Less Tropical Beach</h3>
   						<p>This looks like it's on an small island, and probably has less visitors. It could be a popular vacation spot, what do I know? . . . Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   					</div>
-  				</div><!--end .modal-body-->
-  		  </div><!--end .modal-content-->
-  		</div><!--end .modal-->
+  				</div>
+  		  </div>
+  		</div>
       <div class="grid-item five">
         <div class="thumb"></div><hr />
         <div class="card-content">
@@ -148,7 +150,7 @@
           <p class="card-text">Not much to describe here, it's just some rocks in some water. It looks like a great spot if you're an Instagram influencer.</p>
           <button data-modal="#54" class="card-more button">View</button>
         </div>
-      </div><!--end .grid-item -->
+      </div>
       <div id="54" class="modal">
   		  <div class="modal-content">
   		    <span class="close">&times;</span>
@@ -158,9 +160,9 @@
   						<h3>Rocks and Water</h3>
   						<p>Not much to describe here, it's just some rocks in some water. It looks like a great spot if you're an Instagram influencer . . . Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   					</div>
-  				</div><!--end .modal-body-->
-  		  </div><!--end .modal-content-->
-  		</div><!--end .modal-->
+  				</div>
+  		  </div>
+  		</div>
       <div class="grid-item six">
         <div class="thumb"></div><hr />
         <div class="card-content">
@@ -168,7 +170,7 @@
           <p class="card-text">This photo is just some rocks. Looks like there's some water in the background, but the photo is aimed pretty far towards the ground.</p>
           <button data-modal="#59" class="card-more button">View</button>
         </div>
-      </div><!--end .grid-item -->
+      </div>
       <div id="59" class="modal">
   		  <div class="modal-content">
   		    <span class="close">&times;</span>
@@ -178,129 +180,129 @@
   						<h3>Rocks with Less Water</h3>
   						<p>This photo is just some rocks. Looks like there's some water in the background, but the photo is aimed pretty far towards the ground . . . Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   					</div>
-  				</div><!--end .modal-body-->
-  		  </div><!--end .modal-content-->
-  		</div><!--end .modal-->
+  				</div>
+  		  </div>
+  		</div>
       <div class="grid-item seven">
         <div class="thumb"></div><hr />
         <div class="card-content">
-          <h4 class="card-title"></h4>
-          <p class="card-text"></p>
+          <h4 class="card-title">Un-Naturally Blue Water</h4>
+          <p class="card-text">The water in this picture is blue. Very blue. There must be a filter on it, right? If not, where can I find it?</p>
           <button data-modal="#71" class="card-more button">View</button>
         </div>
-      </div><!--end .grid-item -->
+      </div>
       <div id="71" class="modal">
   		  <div class="modal-content">
   		    <span class="close">&times;</span>
   				<div class="modal-body">
             <img src="https://picsum.photos/800/450/?image=16" alt="example" />
   					<div class="eg-text">
-  						<h3></h3>
-  						<p> . . . Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  						<h3>Un-Naturally Blue Water</h3>
+  						<p>The water in this picture is blue. Like, very blue. There must be a filter on it, right? If not, where can I find it? . . . Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   					</div>
-  				</div><!--end .modal-body-->
-  		  </div><!--end .modal-content-->
-  		</div><!--end .modal-->
+  				</div>
+  		  </div>
+  		</div>
       <div class="grid-item eight">
         <div class="thumb"></div><hr />
         <div class="card-content">
-          <h4 class="card-title"></h4>
-          <p class="card-text"></p>
+          <h4 class="card-title">Scenic Path</h4>
+          <p class="card-text">What's a better way to spend a Saturday morning than going for a stroll down a lovely grass lined path.</p>
           <button data-modal="#32" class="card-more button">View</button>
         </div>
-      </div><!--end .grid-item -->
+      </div>
       <div id="32" class="modal">
   		  <div class="modal-content">
   		    <span class="close">&times;</span>
   				<div class="modal-body">
             <img src="https://picsum.photos/800/450/?image=17" alt="example" />
   					<div class="eg-text">
-  						<h3></h3>
-  						<p></p>
+  						<h3>Scenic Path</h3>
+  						<p>What's a better way to spend a Saturday morning than going for a stroll down a lovely grass lined path. . . . Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   					</div>
-  				</div><!--end .modal-body-->
-  		  </div><!--end .modal-content-->
-  		</div><!--end .modal-->
+  				</div>
+  		  </div>
+  		</div>
       <div class="grid-item nine">
         <div class="thumb"></div><hr />
         <div class="card-content">
-          <h4 class="card-title"></h4>
-          <p class="card-text"></p>
-          <button data-modal="#19" class="card-more button">View</button>
+          <h4 class="card-title">Grass</h4>
+          <p class="card-text">The title pretty much says it all. It's just a picture of some tall grass.</p>
+          <button data-modal="#18" class="card-more button">View</button>
         </div>
-      </div><!--end .grid-item -->
-      <div id="19" class="modal">
+      </div>
+      <div id="18" class="modal">
   		  <div class="modal-content">
   		    <span class="close">&times;</span>
   				<div class="modal-body">
             <img src="https://picsum.photos/800/450/?image=18" alt="example" />
   					<div class="eg-text">
-  						<h3</h3>
-  						<p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  						<h3>Grass</h3>
+  						<p>The title pretty much says it all. It's just a picture of some tall grass. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   					</div>
-  				</div><!--end .modal-body-->
-  		  </div><!--end .modal-content-->
-  		</div><!--end .modal-->
+  				</div>
+  		  </div>
+  		</div>
       <div class="grid-item ten">
         <div class="thumb"></div><hr />
         <div class="card-content">
-          <h4 class="card-title"></h4>
-          <p class="card-text"></p>
+          <h4 class="card-title">Tree Growth</h4>
+          <p class="card-text">Here's something growing on a tree. No clue what it is, but it looks cool.</p>
           <button data-modal="#19" class="card-more button">View</button>
         </div>
-      </div><!--end .grid-item -->
+      </div>
       <div id="19" class="modal">
   		  <div class="modal-content">
   		    <span class="close">&times;</span>
   				<div class="modal-body">
             <img src="https://picsum.photos/800/450/?image=19" alt="example" />
   					<div class="eg-text">
-  						<h3></h3>
-  						<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  						<h3>Tree Growth</h3>
+  						<p>Here's something growing on a tree. No clue what it is, but it looks cool. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   					</div>
-  				</div><!--end .modal-body-->
-  		  </div><!--end .modal-content-->
-  		</div><!--end .modal-->
+  				</div>
+  		  </div>
+  		</div>
       <div class="grid-item eleven">
         <div class="thumb"></div><hr />
         <div class="card-content">
-          <h4 class="card-title"></h4>
-          <p class="card-text"></p>
+          <h4 class="card-title">Learning Zone</h4>
+          <p class="card-text">There's no better way to study than with your phone covering the book.</p>
           <button data-modal="#20" class="card-more button">View</button>
         </div>
-      </div><!--end .grid-item -->
+      </div>
       <div id="20" class="modal">
   		  <div class="modal-content">
   		    <span class="close">&times;</span>
   				<div class="modal-body">
             <img src="https://picsum.photos/800/450/?image=20" alt="example" />
   					<div class="eg-text">
-  						<h3>Trés Forks</h3>
-  						<p>What's better than a fork? Three forks, of course. Not much better, though, and they do take up extra space, so. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  						<h3>Learning Zone</h3>
+  						<p>There's no better way to study than with your phone covering the book. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   					</div>
-  				</div><!--end .modal-body-->
-  		  </div><!--end .modal-content-->
-  		</div><!--end .modal-->
+  				</div>
+  		  </div>
+  		</div>
       <div class="grid-item twelve">
         <div class="thumb"></div><hr />
         <div class="card-content">
-          <h4 class="card-title"></h4>
-          <p class="card-text"></p>
+          <h4 class="card-title">Pretty White Heels</h4>
+          <p class="card-text">Fun Fact: Egyptian butchers wore high heels to keep their feet out of the blood and debris on the floor.</p>
           <button data-modal="#21" class="card-more button">View</button>
         </div>
-      </div><!--end .grid-item -->
+      </div>
       <div id="21" class="modal">
   		  <div class="modal-content">
   		    <span class="close">&times;</span>
   				<div class="modal-body">
             <img src="https://picsum.photos/800/450/?image=21" alt="example" />
   					<div class="eg-text">
-  						<h3></h3>
-  						<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  						<h3>Pretty White Heels</h3>
+  						<p>Fun Fact: Egyptian butchers wore high heels to keep their feet out of the blood and debris on the floor. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   					</div>
-  				</div><!--end .modal-body-->
-  		  </div><!--end .modal-content-->
-  		</div><!--end .modal-->
+  				</div>
+  		  </div>
+  		</div>
     </main>
     <footer>
       <p>&copy; 2021 Michael Pierce &nbsp;|&nbsp; All photos from <a href="https://picsum.photos/">Lorem Picsum</a>.</p>

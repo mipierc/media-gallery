@@ -1,31 +1,28 @@
-:root {/*-- Sets color variables --*/
-  --prime: darkgrey;
-	--button: blue;
+:root {
+  --prime: #3b0245;
+	--button: #64055D;
   --text: black;
-  --rev-text: black;
-  --accent: blue;
+  --rev-text: white;
+  --accent: black;
   --bg: #F3F3F3;
 }
-body { /*-- Sets body defaults --*/
+body {
   padding: .25rem;
   font-size: 18px;
   color: var(--text);
   background-color: var(--prime);
   margin: 0 auto;
 }
-i.fas { /*-- adds a little padding left and right on fontawesome icons --*/
+i.fas i.far {
   padding: 0 .33em;
 }
-/*------------------
---  Nav Styles  --
-------------------*/
-.topnav { /*-- main navigation element --*/
-  margin-top: .25rem; /*-- uses negative margin to pull menu to top --*/
-  display: flex; /*-- creates a flex container --*/
-  flex-direction: column; /*-- direction is for MOBILE screen sizes --*/
-  justify-content: flex-end; 	 /*-- lays out menu items--*/
-  z-index: 1000; /*-- makes navbar always sit in the front, on the z-axis--*/
-  width: 100%; /*-- makes navbar occupy full width of the body --*/
+.topnav {
+  margin-top: .25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 1000;
+  width: 100%;
 }
 .nav-item{
   padding-left: 3rem;
@@ -35,175 +32,171 @@ i.fas { /*-- adds a little padding left and right on fontawesome icons --*/
 
 }
 a.nav-item {
-  top: 4px; /*-- tweaks vertical position --*/
+  top: 4px;
 
-  text-align: center; /*-- center-aligns all text inside their boxes --*/
-  margin: auto 0; /*-- centers menu text vertically --*/
+  text-align: center;
+  margin: auto 0;
   color: var(--rev-text);
-  transition: color 250ms ease-in-out; /*-- specifies transition, duration, and easing --*/
+  transition: color 250ms ease-in-out;
 }
 a.nav-item:hover {
   text-decoration: underline;
-  cursor: pointer; /*-- changes menu items to pointer on hover --*/
+  cursor: pointer;
 }
 .label {
   font-size: 1rem;
 }
 .nav-item.trigram {
-  display: none; /*-- hides trigram (hamburger menu button) by default --*/
-  text-decoration: none; /*-- removes underline --*/
-  font-size: 2rem; /*-- makes much larger than normal text--*/
+  display: none;
+  text-decoration: none;
+  font-size: 2rem;
 }
-/*-- Mobile Nav Queries --*/
-/*--At screens BELOW 768px, hides nav menu items and displays trigram --*/
+
 @media screen and (max-width: 767px) {
   .topnav a, .topnav span {display: none;}
   .topnav a.trigram {display:inherit; position:absolute; right:4%; font-size:2em; padding: .25em; background:var(--prime);}
 }
-/*-- At screens BELOW 768px,  rules for mobile nav--*/
 @media screen and (max-width: 767px) {
-  .topnav.responsive {align-items: center; border: 3px sold black; margin-bottom: 2rem;} /*-- vertically centers--*/
-  .topnav.responsive a, .topnav.responsive span {display:inherit;} /*-- makes menu items visible --*/
-  .topnav.responsive a:first-child {margin-top:1em;} /*-- adds space above first item --*/
-  .topnav.responsive a:not(:last-child) {display:inherit; padding-top:1em;} /*-- makes items visible (but not the trigram) and adds space above them--*/
-  .topnav.responsive a.more {margin-bottom: 2em;} /*-- adds margin below bottom item --*/
-  .topnav.responsive a.trigram {visibility:hidden; transition:none;} /*-- hides trigram when open --*/
-  .topnav.responsive a.trigram:after {content:'\000D7'; visibility:visible; text-indent: -.5em;} /*-- replaces trigram sign with x-sign on mobile. --*/
+  .topnav.responsive {align-items: center; border: 3px sold white; margin-bottom: 2rem;}
+  .topnav.responsive a, .topnav.responsive span {display:inherit;}
+  .topnav.responsive a:first-child {margin-top:1em;}
+  .topnav.responsive a:not(:last-child) {display:inherit; padding-top:1em;}
+  .topnav.responsive a.more {margin-bottom: 2em;}
+  .topnav.responsive a.trigram {visibility:hidden; transition:none;}
+  .topnav.responsive a.trigram:after {content:'\000D7'; visibility:visible; text-indent: -.5em;}
 }
-/*-- At screens 768px and ABOVE, set normal menu defaults --*/
 @media screen and (min-width: 768px) {
-  .topnav {display: flex; flex-direction: row; justify-content: flex-end;}
-  a.nav-item {  border-left: 3px solid black; }
+  .topnav {display: flex; flex-direction: row; justify-content: center;}
+  a.nav-item {  border: .5px solid white; padding-left: 4rem; padding-right: 4rem;}
+
 }
-/*-- Styles for slideshow --*/
 .slideshow {
   padding: 1em;
 }
 .slideshow-wrapper {
-  position: relative; /*-- this allows children to be position absolutely --*/
-  margin: auto; /*-- simple centering method--*/  max-width: 100%; /*-- contrains slideshow on largest screens --*/
+  position: relative;
+  margin: auto; max-width: 100%;
 }
 .slideshow-wrapper img {
-  width: 100%; /*-- makes slideshow responsive in size --*/
+  width: 100%;
   border-top: 2px solid black;
   border-left: 2px solid black;
   border-top: 2px solid black;
 }
 .prev, .next {
-  cursor: pointer; /*-- changes hover cursor to the hand --*/
-  position: absolute; /*-- positions arrows absolutely--*/
-  top: 50%; /*-- positions arrows half the height of parent from top --*/
-  width: auto; /*-- matches width of parent --*/
-  padding: 16px; /*-- adds a little bit of space--*/
-  margin-top: -22px; /*-- adjusts position by height of arrows --*/
-  color: white; /*-- sets color for contrast --*/
-  font-weight: bold; /*-- selects heavier font --*/
-  font-size: 18px; /*-- sets arrow font size --*/
-  transition: 0.6s ease; /*-- sets transition speed for arrow hover--*/
-  border-radius: 0 3px 3px 0; /*-- slightly rounds inside borders --*/
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  user-select: none; /*-- prevents users from selecting buttons --*/
+  user-select: none;
 }
 .next {
-  right: 0; /*-- positions next arrow hard right --*/
-  border-radius: 3px 0 0 3px; /*-- rounds the outside borders --*/
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.popup{
+  display: none;
 }
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8); /*-- gives a background for contrast on hover --*/
+  background-color: rgba(0,0,0,0.8);
 }
 .caption {
-  background: rgba(255,255,255,0.4); /*-- transparent black background --*/
-  color: #04040; /*-- sets color to almost white --*/
-  font-size: 22px; /*-- sets font size --*/
-  padding: 6px 12px; /*-- sets caption padding --*/
-  position: absolute; /*-- positions caption text absolutely--*/
-  bottom: 8px; /*-- sets position 8px from bottom --*/
-  width: 98.25%; /*-- sets width equal to container width --*/
-  text-align: center; /*-- aligns text center --*/
+  background: rgba(255,255,255,0.4);
+  color: #04040;
+  font-size: 22px;
+  padding: 6px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 98.25%;
+  text-align: center;
 }
 .numberof {
-  color: #f2f2f2; /*-- sets color to almost white --*/
-  font-size: 12px; /*-- sets font size --*/
-  padding: 8px 12px; /*-- sets numberof padding --*/
-  position: absolute; /*-- positions numberof text absolutely--*/
-  top: 0; /*-- sets position hard to the top--*/
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
 }
 .indicator {
-  cursor:pointer; /*-- changes hover cursor to the hand --*/
-  height: auto; /*-- sets height of pics --*/
-  width: 25%; /*-- sets width of pics --*/
-  margin: 0 2px; /*-- adds margin between pics --*/
-  background-color: #bbb; /*-- sets background color to light gray --*/
-  display: inline-block; /*-- displays in a horizontal line --*/
-  transition: all 250ms ease-in-out; /*-- allows opacity change to take time --*/
+  cursor:pointer;
+  height: auto;
+  width: 25%;
+  margin: 0 2px;
+  background-color: #bbb;
+  display: inline-block;
+  transition: all 250ms ease-in-out;
   opacity: .5;
 }
 .indicator img {
-  width: 100% !important; /*-- small images fill available space --*/
+  width: 100% !important;
 }
 .active, .indicator:hover {
-  opacity: 1; /*-- makes fully visible when hovered  --*/
+  opacity: 1;
 }
-/* Fading animation */
+
 .fade {
-  -webkit-animation-name: fade; /*-- webkit prefix  --*/
-  -webkit-animation-duration: 1.2s; /*-- webkit prefix --*/
-  animation-name: fade; /*-- defines which animation to use --*/
-  animation-duration: 1.5s; /*-- sets the duration --*/
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.2s;
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
-@-webkit-keyframes fade { /*-- webkit prefix --*/
+@-webkit-keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
 }
-@keyframes fade { /*-- sets "fade" animation properties --*/
-  from {opacity: .4} /*-- sets start of animation --*/
-  to {opacity: 1} /*-- sets end of animation --*/
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
-/* On smaller screens, hides slideshow */
 @media only screen and (max-width: 767px) {
   .slideshow {display: none;}
 }
-/*-- ----------
-- GRID STYLES -
----------------*/
+
 .main-grid {
-  margin-top: 1.75rem; /*-- adds space above grid wrap --*/
-  display: grid; /*-- sets display mode --*/
-  grid-gap: 1.5rem; /*-- creates gutters --*/
-  grid-template-columns: 1fr; /*-- default mobile layout is 1-column--*/
+  margin-top: 1.75rem;
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: 1fr;
 }
-/*-- grid media queries--*/
-@media screen and (min-width: 550px) { /*-- at screens between 550 and 767 --*/
+@media screen and (min-width: 550px) {
   body {width: 96%;}
-  .main-grid {grid-template-columns: repeat(2, 1fr);}  /*-- 2 columnns --*/
+  .main-grid {grid-template-columns: repeat(2, 1fr);}
 }
-@media screen and (min-width: 768px) {/*-- at screens between 768 and 989 --*/
+@media screen and (min-width: 768px) {
   body {width: 94%;}
-  .main-grid {grid-template-columns: repeat(3, 1fr);} /*-- 3 columnns --*/
+  .main-grid {grid-template-columns: repeat(3, 1fr);}
 }
-@media screen and (min-width: 990px) {/*-- at screens between 990 and 1271 --*/
+@media screen and (min-width: 990px) {
   body {width: 92%;}
-  .main-grid {grid-template-columns: repeat(4, 1fr);} /*-- 4 columnns --*/
+  .main-grid {grid-template-columns: repeat(4, 1fr);}
 }
-@media screen and (min-width: 1280px) {/*-- at screens 1280 and above --*/
+@media screen and (min-width: 1280px) {
   body {width: 90%;}
-  .main-grid {grid-template-columns: repeat(4, 1fr);} /*-- 4 columnns --*/
+  .main-grid {grid-template-columns: repeat(4, 1fr);}
 }
-/*-- media card styles -- */
+
 .grid-item {
-  border-radius: 4px;  /*-- rounds borders --*/
-  padding: .5em; /*-- adds space inside --*/
+  border-radius: 4px;
+  padding: .5em;
   background-color: var(--bg);
 }
 .thumb {
-  padding-bottom: 56%; /*-- creates ~16:9 ratio--*/
-  background-size: cover; /*--sets image to cover background --*/
-  background-position: center center; /*-- positions image horiz. and vert. center --*/
-  border-radius: 4px 4px 0 0; /*-- rounds top-left and top-right edges --*/
+  padding-bottom: 56%;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 4px 4px 0 0;
 }
-/*-- Card Backgrounds --*/
+
 .one .thumb {background-image: url('https://picsum.photos/300/200/?image=10');}
 .two .thumb {background-image: url('https://picsum.photos/300/200/?image=11');}
 .three .thumb {background-image: url('https://picsum.photos/300/200/?image=12');}
@@ -212,25 +205,26 @@ a.nav-item:hover {
 .six .thumb {background-image: url('https://picsum.photos/300/200/?image=15');}
 .seven .thumb {background-image: url('https://picsum.photos/300/200/?image=16');}
 .eight .thumb {background-image: url('https://picsum.photos/300/200/?image=17');}
-.nine .thumb {background-image: url('https://picsum.photos/300/200/?image1819');}
+.nine .thumb {background-image: url('https://picsum.photos/300/200/?image=18');}
 .ten .thumb {background-image: url('https://picsum.photos/300/200/?image=19');}
 .eleven .thumb {background-image: url('https://picsum.photos/300/200/?image=20');}
 .twelve .thumb {background-image: url('https://picsum.photos/300/200/?image=21');}
-/*----*/
+
 .card-content {
   padding: 0 .5em .7em .5em;
   display: flex;
   flex-direction: column;
-  align-items: center; /*-- vertically centers card content --*/
+  align-items: center;
 }
 .card-title {
   margin: 1rem 0 0 0;
-  text-transform: uppercase; /*--all caps text --*/
-  align-self: flex-start; /*-- positions at beginning --*/
+  text-transform: uppercase;
+  align-self: flex-start;
   color: var(--text);
 }
 .card-text {
-  font-size: .80em;
+  font-family: 'Bitter', serif;
+  font-size: .72em;
   line-height: 1.2;
   align-self: flex-start;
   color: var(--text);
@@ -252,18 +246,17 @@ button.card-more, button.card-more:visited {
 button.card-more:hover, button.card-more:active {
   font-weight: 600;
 }
-/*-- Modal Styles --*/
-/* The Modal (background) */
+
 .modal {
-   display: none;/*-- hidden by default --*/
-   position: fixed; /*-- doesn't move on the screen --*/
-   z-index: 1100; /*-- sets higher than anything else so modal is in the very front --*/
-   left: 0; /*-- positions at zero pixels from the left --*/
-   top: 0; /*-- positions at zero pixels from the top --*/
-   width: 100%; /*-- fills the space --*/
-   height: 100%; /*-- fills the space --*/
-   overflow: auto; /*-- handles overflow as normal. --*/
-   background-color: rgba(10, 10, 10, .4); /*--slightly transparent--*/
+   display: none;
+   position: fixed;
+   z-index: 1100;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+   background-color: rgba(10, 10, 10, .4);
 }
 .modal-content {
    background-color: var(--bg);
@@ -272,16 +265,16 @@ button.card-more:hover, button.card-more:active {
    padding: 1em;
    width: 92%;
    border-radius: 4px;
-   animation: fadein .3s ease-in-out; /*-- sets animation properties: name, duration, easing --*/
+   animation: fadein .3s ease-in-out;
 }
 @keyframes fadein {
-  from{transform:scale(.1);} /*-- modal grows from very small to full size--*/
+  from{transform:scale(.1);}
 }
 .close {
    color: var(--accent);
    font-size: 2.5em;
    font-weight: bold;
-   position: absolute; /*-- always at the top right of the modal --*/
+   position: absolute;
    top: 5px;
    right: 4.25%;
    transition: all .2s ease-in;
@@ -296,7 +289,7 @@ button.card-more:hover, button.card-more:active {
 }
 .modal-body {
   display: grid;
-  grid-template-columns: 1fr; /*-- default modal grid (for mobile screens)--*/
+  grid-template-columns: 1fr;
   grid-gap: 2em;
 }
 .eg-text {
@@ -311,11 +304,11 @@ button.card-more:hover, button.card-more:active {
   width: 100%;
   height: auto;
 }
-@media screen and (min-width: 1280px) { /*-- better modal display on largest screens --*/
+@media screen and (min-width: 1280px) {
   .modal-body {grid-template-columns: 7fr 5fr; }
 
 }
-/*-- Footer Styles --*/
+
 footer {
   background-color: var(--prime);
   padding: .25rem;
